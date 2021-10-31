@@ -1,8 +1,11 @@
-## Installation
-### Install Arduino and add [ESP32 board](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/ "ESP32") from boards manager
-### Install [ESP32 Sketch data upload](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/ "ESP32")
-### Install Library Dependencies (from arduino library manager)
-  - Adafruit GFX library by Adafruit version 1.7.5
-  - GxEPD by Jean-Marc Zingg version 3.0.9
-  - ArduinoJson by Benoit Blanchon version 6.14.1
+# TimCal
 
+![Full Image](timcal_image.jpg)
+
+## Install Library Dependencies (from arduino library manager)
+  - Adafruit GFX library by Adafruit (tested with v1.7.5)
+  - GxEPD by Jean-Marc Zingg version (tested with v3.0.9)
+  - JSON Streaming Parser by Daniel Eichhorn (tested with v1.0.5)
+
+## Usage
+Upload sketch and follow instruction on screen

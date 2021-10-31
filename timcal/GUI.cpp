@@ -426,8 +426,8 @@ void display_calender(GxEPD_Class* display){
   int16_t calender_base_y = 40;
   int16_t calender_base_x = 120;
   display->setCursor(calender_base_x, calender_base_y);
-  display->println("Mon   Tue   Wed   Thu   Fri   Sat   Sun");
-  display->getTextBounds("Mon   Tue   Wed   Thu   Fri   Sat   Sun", calender_base_x, calender_base_y, &x1, &y1, &w, &h);
+  display->println(CAL_STRING);
+  display->getTextBounds(CAL_STRING, calender_base_x, calender_base_y, &x1, &y1, &w, &h);
   uint8_t num_offset, print_valid = 0;
   uint8_t day = 1;
   for (uint8_t j = 0; j <= 5; j++) {

@@ -176,7 +176,6 @@ void setup(void)
 	display_time(&display); 
 
 	display_update(&display);// display_update should be at the end as it controls the refresh type and displays the image
-	delay(2000);
 	//  DEBUG.println("Turning off everything");
 	digitalWrite(SD_EN, HIGH);
 	digitalWrite(BATT_EN, HIGH);

@@ -59,6 +59,11 @@
 // for example to update afer every 6 hours, UPDATE_HOUR_INTERVAL = 6 and UPDATE_MIN = 60
 // to update every 15 mins, UPDATE_HOUR_INTERVAL = 1 and UPDATE_MIN = 15
 
+// Calendar
+// Offset to change start day. 0=>Sun, 1=>Sat, 2=>Fri ... 6=>Mon
+#define START_DAY_OFFSET 6
+#define CAL_STRING "Mon   Tue   Wed   Thu   Fri   Sat   Sun"
+
 // todo list definitions
 // memory allocated for getting json output from todoist
 #define MAX_TASKS 8

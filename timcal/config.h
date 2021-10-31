@@ -60,8 +60,8 @@
 // to update every 15 mins, UPDATE_HOUR_INTERVAL = 1 and UPDATE_MIN = 15
 
 // Calendar
-// Offset to change start day. 0=>Sun, 1=>Sat, 2=>Fri ... 6=>Mon
-#define START_DAY_OFFSET 6
+// Offset to change start day. 1=>Sun, 2=>Sat, 3=>Fri ... 7=>Mon
+#define START_DAY_OFFSET 7
 #define CAL_STRING "Mon   Tue   Wed   Thu   Fri   Sat   Sun"
 
 // todo list definitions

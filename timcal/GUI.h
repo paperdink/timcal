@@ -11,6 +11,9 @@
 #include "SPIFFS.h"
 #include "SD.h"
 
+#define TIME_BASE_X 25
+#define TIME_BASE_Y 60
+
 void display_config_gui(GxEPD_Class* display);
 void display_tasks(GxEPD_Class* display);
 void display_weather(GxEPD_Class* display, const char* icon);

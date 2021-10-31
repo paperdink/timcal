@@ -9,6 +9,7 @@
 #include "driver/adc.h"
 #include "PCF8574.h"
 
+#include "GUI.h"
 #include "config.h"
 #include "WiFiManager.h"
 #include "date_time.h"
@@ -394,12 +395,11 @@ void display_time(GxEPD_Class* display){
   display->setFont(LARGE_FONT);
   display->setTextSize(1);
   display->setTextColor(GxEPD_BLACK);
-  int16_t time_base_y = 60;
-  int16_t time_base_x = 25;
-  display->getTextBounds("03", time_base_x, time_base_y, &x1, &y1, &w, &h); // 03 is arbitrary text to get the height and width
-  display->fillRect(time_base_x - 10, time_base_y - h - 10, w + 15, time_base_y + h + 10, GxEPD_WHITE);
+  
+  display->getTextBounds("03", TIME_BASE_X, TIME_BASE_Y, &x1, &y1, &w, &h); // 03 is arbitrary text to get the height and width
+  display->fillRect(TIME_BASE_X - 10, TIME_BASE_Y - h - 10, w + 15, TIME_BASE_Y + h + 10, GxEPD_WHITE);
 
-  display->setCursor(time_base_x, time_base_y);
+  display->setCursor(TIME_BASE_X, TIME_BASE_Y);
   if (now.hour < 10) {
     display->print("0");
     display->print(now.hour);
@@ -407,7 +407,7 @@ void display_time(GxEPD_Class* display){
     display->println(now.hour);
   }
 
-  display->setCursor(time_base_x, time_base_y + h + 10);
+  display->setCursor(TIME_BASE_X, TIME_BASE_Y + h + 10);
   if (now.min < 10) {
     display->print("0");
     display->print(now.min);
@@ -518,13 +518,22 @@ void display_background(GxEPD_Class* display){
 }
 
 void display_update(GxEPD_Class* display){
-   if (!(now.min % 5) || first_boot == 1) {
+  if (!(now.min % 5) || first_boot == 1) {
     // Full update once every 5 mins and on the first boot
     display->update();
     delay(2000);
     display->updateWindow(0, 0, GxEPD_WIDTH, GxEPD_HEIGHT, false);
   }else{
-    display->updateWindow(0, 0, GxEPD_WIDTH, GxEPD_HEIGHT, false);
-    //display->updateWindow(time_base_x - 10, time_base_y - h - 10, w + 15, time_base_y + h + 10, false);
+    //display->updateWindow(0, 0, GxEPD_WIDTH, GxEPD_HEIGHT, false);
+    int16_t  x1, y1;
+    uint16_t w, h;
+    
+    //display time
+    display->setFont(LARGE_FONT);
+    display->setTextSize(1);
+    display->setTextColor(GxEPD_BLACK);
+    
+    display->getTextBounds("03", TIME_BASE_X, TIME_BASE_Y, &x1, &y1, &w, &h); // 03 is arbitrary text to get the height and width
+    display->updateWindow(TIME_BASE_X - 10, TIME_BASE_Y - h - 10, w + 15, TIME_BASE_Y + h + 10, true);
   }
 }

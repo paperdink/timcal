@@ -164,15 +164,14 @@ void setup(void)
 	float batt_voltage = (float)((batt_adc/3970.0)*4.2);
 	//float batt_voltage = 4.1;
 
-	// Get the date details before any date/time related tasks
-	get_date_dtls(time_zone_string);
-
 	display_battery(&display,batt_voltage,not_charging);
 	display_wifi(&display,wifi_connected);
 	display_weather(&display,weather);
 	display_background(&display);
+  display_tasks(&display);
+  // Get the date details before any date/time related tasks
+  get_date_dtls(time_zone_string);
 	display_calender(&display);
-	display_tasks(&display);
 	display_time(&display); 
 
 	display_update(&display);// display_update should be at the end as it controls the refresh type and displays the image
@@ -181,7 +180,7 @@ void setup(void)
 	digitalWrite(BATT_EN, HIGH);
 	digitalWrite(EPD_EN, HIGH);
 	// Powerdown EPD
-	//display.powerDown(); // Dont use this if you require partial updates
+	// display.powerDown(); // Dont use this if you require partial updates
 	digitalWrite(EPD_RES, LOW);
 	delay(50);
 	digitalWrite(EPD_RES, HIGH);

@@ -437,7 +437,7 @@ void display_calender(GxEPD_Class* display){
       if (i >= 3 && i <= 7) {
         num_offset = 17;    // then i need to reduce to 17
       }
-      if (j == 0 && i == now.day_offset) {
+      if (j == 0 && ((i-1) == now.day_offset || now.day_offset == 0)) {
         // start from the offset in the month, ie which day does 1st of the month lie on
         print_valid = 1;
       }

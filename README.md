@@ -17,4 +17,4 @@ Press the reset button on the back of the board. The board will then broadcast a
 The AP has a captive portal which will help configure the device. When you connect your phone to the AP,
 your phone should automatically take you to the configuration page to select SSID, password, todoist API key, etc.
 
-Alternatively, is you prefer config files, checkout [timcal2](https://github.com/paperdink/timcal2)
+Alternatively, if you prefer config files, checkout [timcal2](https://github.com/paperdink/timcal2)

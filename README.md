@@ -18,4 +18,7 @@ The AP has a captive portal which will help configure the device. When you conne
 your phone should automatically take you to the configuration page to select SSID, password, todoist API key, etc.
 If not, open up a browser and connect to `192.168.1.1`.
 
+<img src="https://github.com/paperdink/timcal/raw/main/Image_1.jpg" width="200" height="400" /> <img src="https://github.com/paperdink/timcal/raw/main/Image_2.jpg" width="200" height="400" /> <img src="https://github.com/paperdink/timcal/raw/main/Image_3.jpg" width="200" height="400" /> <img src="https://github.com/paperdink/timcal/raw/main/Image_4.jpg" width="200" height="400" />
+
+
 Alternatively, if you prefer config files, checkout [timcal2](https://github.com/paperdink/timcal2)

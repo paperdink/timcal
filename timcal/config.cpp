@@ -74,6 +74,6 @@ int8_t load_config(){
   strncpy(country_string,config["country"],30);
   strncpy(todoist_token_string,config["todoist_token"],42);
   strncpy(openweather_appkey_string,config["openweather_appkey"],34);
-  strncpy(time_zone_string,config["timezone"],7);
+  strncpy(time_zone_string,config["timezone"],30);
   config_done = config["config_done"];
 }

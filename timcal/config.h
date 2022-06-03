@@ -90,7 +90,7 @@ extern RTC_DATA_ATTR char city_string[30];
 extern RTC_DATA_ATTR char country_string[30];
 extern RTC_DATA_ATTR char todoist_token_string[42];
 extern RTC_DATA_ATTR char openweather_appkey_string[34];
-extern RTC_DATA_ATTR char time_zone_string[7];
+extern RTC_DATA_ATTR char time_zone_string[30];
 
 extern char buf[2048];
 int8_t save_config(const char* config);

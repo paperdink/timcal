@@ -62,7 +62,7 @@ RTC_DATA_ATTR char city_string[30];
 RTC_DATA_ATTR char country_string[30];
 RTC_DATA_ATTR char todoist_token_string[42];
 RTC_DATA_ATTR char openweather_appkey_string[34];
-RTC_DATA_ATTR char time_zone_string[7];
+RTC_DATA_ATTR char time_zone_string[30];
 
 const char* weather = NULL;
 char buf[2048];

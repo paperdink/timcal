@@ -19,11 +19,10 @@
 #include "date_time.h"
 
 RTC_DATA_ATTR struct time_struct now; // keep track of time
-String time_zone_base = "UTC";
 
 // Time APIs
 int8_t get_date_dtls(String time_zone) {
-  String time_zone_string = time_zone_base+time_zone;
+  String time_zone_string = time_zone;
   DEBUG.printf("TZ: %s\n", time_zone_string.c_str());
   setenv("TZ", time_zone_string.c_str(), 1);
   

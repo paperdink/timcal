@@ -17,6 +17,8 @@ Press the reset button on the back of the board. The board will then broadcast a
 The AP has a captive portal which will help configure the device. When you connect your phone to the AP,
 your phone should automatically take you to the configuration page to select SSID, password, todoist API key, etc.
 If not, open up a browser and connect to `192.168.1.1`.
+The time zone string must be from this [list](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv).
+
 
 <img src="https://github.com/paperdink/timcal/raw/main/Image_1.jpg" width="200" height="400" /> <img src="https://github.com/paperdink/timcal/raw/main/Image_2.jpg" width="200" height="400" /> <img src="https://github.com/paperdink/timcal/raw/main/Image_3.jpg" width="200" height="400" /> <img src="https://github.com/paperdink/timcal/raw/main/Image_4.jpg" width="200" height="400" />
 

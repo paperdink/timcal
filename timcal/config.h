@@ -44,6 +44,7 @@
 #define CHARGING_PIN 36
 #define BATT_EN 25
 #define BATTERY_VOLTAGE 34
+#define BATTERY_VOLTAGE_ADC ADC1_CHANNEL_6
 
 // Fonts
 #define LARGE_FONT &Gobold_Thin25pt7b

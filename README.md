@@ -16,5 +16,6 @@ Select `ESP32 Dev module` in arduino `Tools>Board` and hit upload.
 Press the reset button on the back of the board. The board will then broadcast an AP "Paperd.Ink_xxxx".
 The AP has a captive portal which will help configure the device. When you connect your phone to the AP,
 your phone should automatically take you to the configuration page to select SSID, password, todoist API key, etc.
+If not, open up a browser and connect to `192.168.1.1`.
 
 Alternatively, if you prefer config files, checkout [timcal2](https://github.com/paperdink/timcal2)

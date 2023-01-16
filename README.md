@@ -1,5 +1,7 @@
 # TimCal
 
+Note: This has been moved to the new Paperd.ink library [here](https://github.com/paperdink/PaperdInk-Library/tree/main/examples/Calther)
+
 ![Full Image](timcal_image.jpg)
 
 ## Install Library Dependencies (from arduino library manager)
